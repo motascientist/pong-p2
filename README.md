@@ -1,2 +1,2 @@
-# pong-p2
-College Project
+# Pong P2
+→ College Project
