@@ -40,7 +40,7 @@ class Gerenciadora:
         teclas = pygame.key.get_pressed()
         for paleta in self.paletas:
             paleta.movimenta(teclas)
-    
+  
     def clique_saida(self):
         """Retornar True se usuário clicou para sair do jogo."""
         for evento in pygame.event.get():

@@ -9,12 +9,13 @@ class Paleta:
         self.posicao = posicao
         self.botao_subir = acoes[0]
         self.botao_descer = acoes[1]
+        self.altura = 100
 
     def desenha(self, display):
         pygame.draw.rect(
             display,                    # tela
             CORES.branco,               # cor
-            self.posicao + [10, 100]    # pos + tam
+            self.posicao + [10, self.altura]    # pos + tam
         )
 
     def movimenta(self, teclas):

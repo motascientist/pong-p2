@@ -7,6 +7,7 @@ from cores import CORES
 class Bola:
     velocidade = 5
     posicao = [200, 150]
+    speed_factor = 1.1
 
     def __init__(self):
         self.direcao = self.cria_vetor_unitario()
@@ -40,15 +41,19 @@ class Bola:
         if self.posicao[1] <= 5:
             self.direcao[1] *= -1
             self.posicao[1] = 5
+            # self.velocidade *= self.speed_factor → Aumenta Superior
 
         if self.posicao[1] >= 295:
-            self.direcao[1] *= -1
-            self.posicao[1] = 295
+            self.direcao[1] *= -1         
+            self.posicao[1] = 295          
+            # self.velocidade *= self.speed_factor → Aumenta inferior
 
         if self.posicao[0] <= 25:
             self.direcao[0] *= -1
             self.posicao[0] = 25
+            self.velocidade *= self.speed_factor # Aumenta Vm na paleta esquerda
 
         if self.posicao[0] >= 375:
             self.direcao[0] *= -1
             self.posicao[0] = 375
+            self.velocidade *= self.speed_factor # Aumenta Vm na paleta direita
