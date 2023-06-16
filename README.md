@@ -2,7 +2,7 @@
 
 ### Desafios
 
-   . A bola aumenta a velocidade em 1 toda vez que acertar uma paleta. Quando um ponto for feito, sua velocidade volta para o valor inicia;
+    . A bola aumenta a velocidade em 1 toda vez que acertar uma paleta. Quando um ponto for feito, sua velocidade volta para o valor inicia;
 
     . Ambas as paletas reduzem de tamanho em 5 pixels toda vez que a bola acerta uma das paletas. Quando um ponto for feito, seus tamanhos voltam para o valor inicial;
 

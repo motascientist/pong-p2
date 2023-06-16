@@ -7,13 +7,17 @@ class Placar:
         self.p1 = 0
         self.p2 = 0
 
-    def atualiza(self, paletas, bola):
+    def atualiza(self, paletas, bola, gerenciadora):
         if self.chama_var(paletas[0], bola, 25): # paleta da esquerda
             self.p2 += 1
+            if self.p2 == 3: # verifica se o jogador 2 ganhou
+                gerenciadora.fim_de_jogo = True # atribui True à variável fim_de_jogo da gerenciadora
             return True
 
         if self.chama_var(paletas[1], bola, 375): # paleta da direita
             self.p1 += 1
+            if self.p1 == 3: # verifica se o jogador 1 ganhou
+                gerenciadora.fim_de_jogo = True # atribui True à variável fim_de_jogo da gerenciadora
             return True
 
         return False

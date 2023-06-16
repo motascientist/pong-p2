@@ -10,6 +10,7 @@ class Gerenciadora:
     def __init__(self):
         self.tela = Tela()
         self.placar = Placar()
+        self.fim_de_jogo = False # criar uma variável booleana chamada fim_de_jogo e inicializá-la como False
         self.inicia_partida()
 
     def inicia_partida(self):
@@ -26,10 +27,10 @@ class Gerenciadora:
                 break
             self.trata_teclas_pressionadas()
             self.bola.movimenta()
-            if self.placar.atualiza(self.paletas, self.bola):
+            if self.placar.atualiza(self.paletas, self.bola, self): # passar a gerenciadora como argumento para a função atualiza do placar
                 self.inicia_partida()
             
-            self.tela.renderiza(self.paletas, self.bola, self.placar)
+            self.tela.renderiza(self.paletas, self.bola, self.placar, self) # passar a gerenciadora como argumento para a função renderiza da tela
             pygame.time.Clock().tick(60)
 
     def trata_teclas_pressionadas(self):
