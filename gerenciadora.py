@@ -1,4 +1,3 @@
-import time
 import pygame
 
 from paleta import Paleta
@@ -47,5 +46,13 @@ class Gerenciadora:
         for evento in pygame.event.get():
             if evento.type == pygame.QUIT:
                 return True
+            if evento.type == pygame.MOUSEBUTTONDOWN: # verificar se o evento é do tipo pygame.MOUSEBUTTONDOWN
+                if self.fim_de_jogo: # verificar se a variável fim_de_jogo é True
+                    self.reinicia_jogo() # chamar a função reinicia_jogo
 
         return False
+
+    def reinicia_jogo(self): # criar uma função que reinicia o jogo
+        self.placar.zera_pontuacao() # chamar a função zera_pontuacao do placar
+        self.fim_de_jogo = False # atribuir False à variável fim_de_jogo
+        self.inicia_partida() # chamar a função inicia_partida

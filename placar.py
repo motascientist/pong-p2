@@ -42,3 +42,7 @@ class Placar:
         # desenhar na tela
         display.blit(p1_texto, (30, 30))
         display.blit(p2_texto, (350, 30))
+
+    def zera_pontuacao(self): # criar uma função que zera a pontuação dos jogadores
+        self.p1 = 0
+        self.p2 = 0
