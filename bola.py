@@ -11,14 +11,12 @@ class Bola:
 
     def __init__(self):
         self.direcao = self.cria_vetor_unitario()
-    
+        # carrega a imagem da bola de tênis
+        self.image = pygame.image.load("ball.png")
+        # Redimensionar
+        self.image = pygame.transform.smoothscale(self.image, (15, 15))
     def desenha(self, display):
-        pygame.draw.circle(
-            display,                    # tela
-            CORES.branco,               # cor
-            self.posicao,               # pos
-            5                           # raio
-        )
+        display.blit(self.image, self.posicao)
 
     def cria_vetor_unitario(self):
         while True:
