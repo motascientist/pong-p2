@@ -13,3 +13,6 @@
     . O jogo possui a opção de ser reiniciado. Após a mensagem de “FIM DE JOGO”, se o usuário clicar em qualquer lugar na tela, a pontuação é zerada e o jogo recomeça;
 
     . Inclua uma nova funcionalidade ou um novo recurso ao jogo! Use sua criatividade :)
+
+
+→ Site para converter de .mp3 para wav https://www.media.io/br/convert/mp4-to-mp3.html
